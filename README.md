@@ -41,8 +41,8 @@ Tasks have one of five statuses:
 5.  **Sent**. The task has been sent to the client.
 6.  **Archived**. The task is archived.
 
-This code sample includes a [```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php) 
-which checks whether or not a given user is allowed to perform a status transition of a task.
+This code sample includes a [```TaskWorkflowVoter```](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php) 
+class which checks whether or not a given user is allowed to perform a status transition of a task.
 
 Prerequisites
 ---------------------------------
