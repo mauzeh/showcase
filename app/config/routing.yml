@@ -1,0 +1,12 @@
+bb_workflow_gui:
+    resource: "@BbWorkflowGuiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+bb_workflow_core:
+    resource: "@BbWorkflowCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /core/
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
