@@ -29,7 +29,7 @@ Tasks have one of five statuses:
 This code sample includes a TaskWorkflowVoter class which checks whether or not
 a given user is allowed to perform a status transition of a task.
 
-1) Rerequisites
+Rerequisites
 ---------------------------------
 1. [Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
 
@@ -45,7 +45,7 @@ $ phpunit --version
 PHPUnit x.y.z by Sebastian Bergmann.
 ```
 
-1) Installing and running the tests
+Installing and running the tests
 ----------------------------------
 1. To install this code sample, navigate to the top directory of the repository and get the dependencies:
 
