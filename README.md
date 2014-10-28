@@ -70,4 +70,6 @@ $ composer install
 
 To run the tests, stay in the top directory of the repository and run:
 
-```$ phpunit -c app```
+```
+$ phpunit -c app
+```
