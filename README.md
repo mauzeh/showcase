@@ -6,7 +6,7 @@ The original project is a web-based workflow app and is currently in
 production by > 5000 users. In this code sample, no GUI is included. Instead,
 you may run the unit tests provided to verify the working of the code.
 
-The intended audience of this repository are code reviewers and technical
+The intended audience of this repository is code reviewers and technical
 recruiters.
 
 The original app is a workflow tool intended for groups of linguists working
