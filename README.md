@@ -54,4 +54,5 @@ $ composer install
 ```
 
 2. To run the tests,  navigate to the top directory of the repository and run:
+
 ```$ phpunit -c app```
