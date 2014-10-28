@@ -64,6 +64,6 @@ To install this code sample, navigate to the top directory of the repository and
 $ composer install
 ```
 
-To run the tests,  navigate to the top directory of the repository and run:
+To run the tests, stay in the top directory of the repository and run:
 
 ```$ phpunit -c app```
