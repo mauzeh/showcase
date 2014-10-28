@@ -68,7 +68,7 @@ class Task
     }
 
     /**
-     * Return the human-readable status.
+     * Return a translatable status string.
      *
      * @return string
      *   The human-readable status.
