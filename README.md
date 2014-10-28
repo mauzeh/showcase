@@ -63,7 +63,7 @@ PHPUnit x.y.z by Sebastian Bergmann.
 
 Installing and running the tests
 ----------------------------------
-To install this code sample, check out this repository on your development box:
+To install this code sample, clone this repository on your development box:
 
 ```
 $ git clone https://github.com/mauzeh/showcase.git
