@@ -1,4 +1,4 @@
-Code sample for review
+Code sample project
 ========================
 
 This repository contains a simplified selection of a real life Symfony project.
