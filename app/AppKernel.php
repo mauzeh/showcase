@@ -19,17 +19,13 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             // Contributed bundles
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
 
             // Custom bundles
             new Bb\Bundle\Workflow\CoreBundle\BbWorkflowCoreBundle(),
-            new Bb\Bundle\Workflow\GuiBundle\BbWorkflowGuiBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
