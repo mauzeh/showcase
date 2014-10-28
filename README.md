@@ -4,7 +4,7 @@ Code sample for review
 This repository contains a simplified selection of a real life Symfony project.
 The original project is a web-based workflow app and is currently in 
 production by > 5000 users. In this code sample, no GUI is included. Instead,
-you may run the unit tests provided to verify the working of the code.
+you may run the unit tests provided to verify that the code works.
 
 The intended audience of this repository is code reviewers and technical
 recruiters.
