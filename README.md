@@ -35,8 +35,8 @@ The files that I think you should review
 For an assessment of the code quality in this repository, please review in 
 particular the following files:
 
-1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/TaskWorkflowVoter.php)
-2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/TaskWorkflowVoterTest.php)
+1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php)
+2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/Voter/TaskWorkflowVoterTest.php)
 3.  [The ```Task``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/Task.php)
 4.  [The ```User``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/User.php)
 
