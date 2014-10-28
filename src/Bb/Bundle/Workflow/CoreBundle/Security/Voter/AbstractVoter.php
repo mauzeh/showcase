@@ -67,7 +67,7 @@ abstract class AbstractVoter implements VoterInterface
     /**
      * Determines whether the logged in user has or supersedes the given role.
      *
-     * @param string         $role  The name of the role that is tested.
+     * @param string         $role  The name of the role that is required.
      * @param TokenInterface $token The current security token.
      *
      * @return bool
