@@ -91,10 +91,6 @@ class Task
         if (!$this->getStatus()) {
             $this->status = static::STATUS_NEW;
         }
-        if (!$this->getTitle()) {
-            $documents = $this->getDocuments();
-            $this->title = $documents[0]->getName();
-        }
     }
 
     /**
@@ -112,12 +108,6 @@ class Task
      * @ORM\Column(name="created", type="datetime")
      */
     private $created;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Document", inversedBy="tasks", cascade={"remove"})
-     * @ORM\JoinTable(name="bb_core_task_document")
-     */
-    private $documents;
 
     /**
      * @var string
@@ -143,54 +133,10 @@ class Task
     /**
      * @var
      *
-     * @ORM\ManyToOne(targetEntity="Skill")
-     * @ORM\JoinColumn(name="skill_id", referencedColumnName="id", nullable=FALSE)
-     */
-    protected $skill;
-
-    /**
-     * @var
-     *
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="creator_id", referencedColumnName="id", nullable=FALSE)
-     */
-    protected $creator;
-
-    /**
-     * @var
-     *
-     * @ORM\ManyToOne(targetEntity="User")
-     * @ORM\JoinColumn(name="owner_id", referencedColumnName="id", nullable=FALSE)
-     */
-    protected $owner;
-
-    /**
-     * @var
-     *
      * @ORM\ManyToOne(targetEntity="User")
      * @ORM\JoinColumn(name="resource_id", referencedColumnName="id")
      */
     protected $resource;
-
-    /**
-     * @ORM\OneToMany(targetEntity="LogEntry", mappedBy="task", cascade={"remove"})
-     */
-    private $logEntries;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Calculation", mappedBy="task", cascade={"remove"})
-     */
-    private $calculations;
-
-    /**
-     * Constructor.
-     */
-    public function __construct()
-    {
-        $this->documents = new ArrayCollection();
-        $this->logEntries = new ArrayCollection();
-        $this->calculations = new ArrayCollection();
-    }
 
     /**
      * Get id
