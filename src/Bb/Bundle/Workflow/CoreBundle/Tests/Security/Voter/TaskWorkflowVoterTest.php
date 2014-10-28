@@ -12,7 +12,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Bb\Bundle\Workflow\CoreBundle\Tests;
+namespace Bb\Bundle\Workflow\CoreBundle\Tests\Security\Voter;
 
 use Bb\Bundle\Workflow\CoreBundle\Entity\Task;
 use Bb\Bundle\Workflow\CoreBundle\Entity\User;
@@ -244,17 +244,17 @@ class TaskWorkflowVoterTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             // Administrators may assign any new Task
-            array('ROLE_BB_ADMIN', null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Administrators may re-assign any new Task
-            array('ROLE_BB_ADMIN', null, Task::STATUS_STARTED, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, null, Task::STATUS_STARTED, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Administrators may accept and start any assigned Task on behalf of anyone
-            array('ROLE_BB_ADMIN', new User(), Task::STATUS_ASSIGNED, Task::STATUS_STARTED, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, new User(), Task::STATUS_ASSIGNED, Task::STATUS_STARTED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Administrators may finish any started Task on behalf of anyone
-            array('ROLE_BB_ADMIN', null, Task::STATUS_STARTED, Task::STATUS_FINISHED, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, null, Task::STATUS_STARTED, Task::STATUS_FINISHED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Administrators may send any finished Task to the client on behalf of anyone
-            array('ROLE_BB_ADMIN', null, Task::STATUS_FINISHED, Task::STATUS_SENT, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, null, Task::STATUS_FINISHED, Task::STATUS_SENT, TaskWorkflowVoter::ACCESS_GRANTED),
             // Administrators may archive any sent Task.
-            array('ROLE_BB_ADMIN', null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_GRANTED),
+            array(User::ROLE_ADMIN, null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Resources may not assign any new Task to anyone.
             array('ROLE_BB_RESOURCE', null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_DENIED),
             // Resources may not send any finished Task to the client.
