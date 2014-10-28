@@ -40,7 +40,7 @@ particular the following files:
 3.  [The ```Task``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/Task.php)
 4.  [The ```User``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/User.php)
 
-Rerequisites
+Prerequisites
 ---------------------------------
 [Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
 
