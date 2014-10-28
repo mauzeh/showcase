@@ -9,9 +9,23 @@ you may run the unit tests provided to verify that the code works.
 The intended audience of this repository is code reviewers and technical
 recruiters.
 
-The original app is a workflow tool intended for groups of linguists working
-on document-centered tasks. 
+The files that I think you should look at
+--------------------------------
+For an assessment of the code quality in this repository, please review in 
+particular the following files:
 
+1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php)
+2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/Voter/TaskWorkflowVoterTest.php)
+3.  [The ```Task``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/Task.php)
+4.  [The ```User``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/User.php)
+
+Description of the original project
+---------------------------------
+The original app is a workflow tool intended for groups of linguists working
+on document-centered tasks.
+
+What this code sample contains
+-----------------------------------
 In this code sample, two Doctrine Entities are implemented: users and tasks. Users
 may have one of four roles: super, admin, resource, and client. In the original app, admins
 may assign tasks to resources. Resources complete tasks, after which admins
@@ -29,16 +43,6 @@ Tasks have one of five statuses:
 
 This code sample includes a TaskWorkflowVoter class which checks whether or not
 a given user is allowed to perform a status transition of a task.
-
-The files that I think you should review
---------------------------------
-For an assessment of the code quality in this repository, please review in 
-particular the following files:
-
-1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php)
-2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/Voter/TaskWorkflowVoterTest.php)
-3.  [The ```Task``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/Task.php)
-4.  [The ```User``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/User.php)
 
 Prerequisites
 ---------------------------------
