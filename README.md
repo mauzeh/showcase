@@ -62,7 +62,19 @@ PHPUnit x.y.z by Sebastian Bergmann.
 
 Installing and running the tests
 ----------------------------------
-To install this code sample, navigate to the top directory of the repository and get the dependencies:
+To install this code sample, check out this repository on your development box:
+
+```
+git clone git@github.com:mauzeh/showcase.git
+```
+
+Then, navigate to the top directory of the repository,
+ 
+```
+cd showcase/
+```
+ 
+And get the dependencies:
 
 ```
 $ composer install
