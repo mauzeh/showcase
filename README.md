@@ -19,12 +19,13 @@ review their work and send it off to the assigned client. Clients can log in
 to the app to download the finished work. 
 
 Tasks have one of five statuses:
-1. *New*. The task has just been created in the system.
-2. *Assigned*. The task has been assigned to a resource.
-3. *Started*. The task has been accepted by the resource and is currently being worked on.
-4. *Finished*. The task is finished by the resource.
-5. *Sent*. The task has been sent to the client.
-6. *Archived*. The task is archived.
+
+1.  *New*. The task has just been created in the system.
+2.  *Assigned*. The task has been assigned to a resource.
+3.  *Started*. The task has been accepted by the resource and is currently being worked on.
+4.  *Finished*. The task is finished by the resource.
+5.  *Sent*. The task has been sent to the client.
+6.  *Archived*. The task is archived.
 
 This code sample includes a TaskWorkflowVoter class which checks whether or not
 a given user is allowed to perform a status transition of a task.
