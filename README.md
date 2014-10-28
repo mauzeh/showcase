@@ -30,6 +30,16 @@ Tasks have one of five statuses:
 This code sample includes a TaskWorkflowVoter class which checks whether or not
 a given user is allowed to perform a status transition of a task.
 
+Interesting file to review
+--------------------------------
+For an assessment of the code quality in this repository, please review in 
+particular the following files:
+
+1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/TaskWorkflowVoter.php)
+2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/TaskWorkflowVoterTest.php)
+3.  [The ```Task``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/Task.php)
+4.  [The ```User``` entity](src/Bb/Bundle/Workflow/CoreBundle/Entity/User.php)
+
 Rerequisites
 ---------------------------------
 [Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
