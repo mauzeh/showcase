@@ -44,6 +44,7 @@ Tasks have one of five statuses:
 This code sample includes a [```TaskWorkflowVoter```](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php) 
 class which checks whether or not a given user is allowed to perform a status transition of a task.
 
+
 Prerequisites
 ---------------------------------
 [Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
@@ -73,12 +74,14 @@ Then, navigate to the top directory of the repository,
 ```
 $ cd showcase/
 ```
- 
+
 And get the dependencies:
 
 ```
 $ composer install
 ```
+
+You will be asked a few questions about your development box set-up. Feel free to leave the default values as-is because you only need to run the unit tests which do not require any database connections, e-mail settings or other configuration.
 
 To run the tests, stay in the top directory of the repository and run:
 
