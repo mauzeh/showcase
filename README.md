@@ -31,11 +31,11 @@ a given user is allowed to perform a status transition of a task.
 
 Rerequisites
 ---------------------------------
-1. [Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
+[Composer](https://getcomposer.org/) is required to run this code. Install Composer by invoking:
 
 ```curl -sS https://getcomposer.org/installer | php```
 
-2. PHPUnit is required to run the tests. Install PHPUnit by invoking:
+[PHPUnit](https://phpunit.de/manual/current/en/installation.html) is required to run the tests. Install PHPUnit by invoking:
 
 ```
 $ wget https://phar.phpunit.de/phpunit.phar
@@ -47,12 +47,12 @@ PHPUnit x.y.z by Sebastian Bergmann.
 
 Installing and running the tests
 ----------------------------------
-1. To install this code sample, navigate to the top directory of the repository and get the dependencies:
+To install this code sample, navigate to the top directory of the repository and get the dependencies:
 
 ```
 $ composer install
 ```
 
-2. To run the tests,  navigate to the top directory of the repository and run:
+To run the tests,  navigate to the top directory of the repository and run:
 
 ```$ phpunit -c app```
