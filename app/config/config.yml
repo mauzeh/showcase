@@ -74,11 +74,6 @@ fos_user:
     firewall_name: main
     user_class: Bb\Bundle\Workflow\CoreBundle\Entity\User
 
-# Configure Bootstrap
-braincrafted_bootstrap:
-    # We're using Grunt and Bower so no less compilation please.
-    less_filter: none
-
 # Configure JMSSecurityExtraBundle
 jms_security_extra:
     # Enables expression language
