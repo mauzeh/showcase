@@ -70,7 +70,7 @@ $ git clone https://github.com/mauzeh/showcase.git
 ```
 
 Then, navigate to the top directory of the repository,
- 
+
 ```
 $ cd showcase/
 ```
