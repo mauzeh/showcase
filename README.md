@@ -30,7 +30,7 @@ Tasks have one of five statuses:
 This code sample includes a TaskWorkflowVoter class which checks whether or not
 a given user is allowed to perform a status transition of a task.
 
-Interesting files that I think you should review
+The files that I think you should review
 --------------------------------
 For an assessment of the code quality in this repository, please review in 
 particular the following files:
