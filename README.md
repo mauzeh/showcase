@@ -65,13 +65,13 @@ Installing and running the tests
 To install this code sample, check out this repository on your development box:
 
 ```
-git clone git@github.com:mauzeh/showcase.git
+$ git clone git@github.com:mauzeh/showcase.git
 ```
 
 Then, navigate to the top directory of the repository,
  
 ```
-cd showcase/
+$ cd showcase/
 ```
  
 And get the dependencies:
