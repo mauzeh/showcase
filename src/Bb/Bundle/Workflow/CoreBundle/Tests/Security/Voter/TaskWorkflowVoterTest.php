@@ -256,11 +256,23 @@ class TaskWorkflowVoterTest extends \PHPUnit_Framework_TestCase
             // Administrators may archive any sent Task.
             array(User::ROLE_ADMIN, null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_GRANTED),
             // Resources may not assign any new Task to anyone.
-            array('ROLE_BB_RESOURCE', null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_DENIED),
+            array(User::ROLE_RESOURCE, null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_DENIED),
             // Resources may not send any finished Task to the client.
-            array('ROLE_BB_RESOURCE', null, Task::STATUS_FINISHED, Task::STATUS_SENT, TaskWorkflowVoter::ACCESS_DENIED),
+            array(USER::ROLE_RESOURCE, null, Task::STATUS_FINISHED, Task::STATUS_SENT, TaskWorkflowVoter::ACCESS_DENIED),
             // Resources may not archive any Tasks.
-            array('ROLE_BB_RESOURCE', null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_DENIED),
+            array(User::ROLE_RESOURCE, null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not assign any Tasks.
+            array(User::ROLE_CLIENT, null, Task::STATUS_NEW, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not start any Tasks.
+            array(User::ROLE_CLIENT, new User(), Task::STATUS_ASSIGNED, Task::STATUS_STARTED, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not re-assign any Tasks.
+            array(User::ROLE_CLIENT, new User(), Task::STATUS_STARTED, Task::STATUS_ASSIGNED, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not finish any Tasks.
+            array(User::ROLE_CLIENT, null, Task::STATUS_STARTED, Task::STATUS_FINISHED, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not send any Tasks to the client.
+            array(User::ROLE_CLIENT, null, Task::STATUS_FINISHED, Task::STATUS_SENT, TaskWorkflowVoter::ACCESS_DENIED),
+            // Clients may not archive any Tasks.
+            array(User::ROLE_CLIENT, null, Task::STATUS_SENT, Task::STATUS_ARCHIVED, TaskWorkflowVoter::ACCESS_DENIED),
         );
     }
 
