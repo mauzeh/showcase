@@ -81,7 +81,7 @@ And get the dependencies:
 $ composer install
 ```
 
-You will be asked a few questions about your development box set-up. Feel free to leave the default values as-is because you only need to run the unit tests which do not require any database connections, e-mail settings or other configuration.
+You will be asked a few questions about your development box set-up. Feel free to leave the default values as they are because you only need to run the unit tests which do not require any database connections, e-mail settings or other configuration.
 
 To run the tests, stay in the top directory of the repository and run:
 
