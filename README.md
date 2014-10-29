@@ -20,7 +20,7 @@ The original app is a workflow tool intended for groups of linguists working on 
 
 What this code sample contains
 -----------------------------------
-In this code sample, two Doctrine Entities are implemented: users and tasks. Users may have one of four roles: super, admin, resource, and client. In the original app, admins may assign tasks to resources. Resources complete tasks, after which admins review their work and send it off to the assigned client. Clients can log in to the app to download the finished work.Supers are admins with some extra privileges.
+In this code sample, two Doctrine Entities are implemented: users and tasks. Users may have one of four roles: super, admin, resource, and client. In the original app, admins may assign tasks to resources. Resources complete tasks, after which admins review their work and send it off to the assigned client. Clients can log in to the app to download the finished work. Supers are admins with some extra privileges.
 
 Tasks have one of five statuses:
 
