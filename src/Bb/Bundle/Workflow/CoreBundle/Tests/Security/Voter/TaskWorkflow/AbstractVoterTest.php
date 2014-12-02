@@ -51,7 +51,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      *
      * @return AbstractVoter
      */
-    protected function _createVoter()
+    protected function createVoter()
     {
         $voter = $this->getMockForAbstractClass('Bb\Bundle\Workflow\CoreBundle\Security\Voter\TaskWorkflow\AbstractVoter');
 
@@ -63,7 +63,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetSupportedAttributes()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $expected = $this->_supportedAttributes;
         $result = $voter->getSupportedAttributes();
         $this->assertSame($expected, $result);
@@ -74,7 +74,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testSupportsAttribute()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $this->assertFalse($voter->supportsAttribute('nonexistent'));
         foreach ($this->_supportedAttributes as $attribute) {
             $this->assertTrue($voter->supportsAttribute($attribute));
@@ -86,7 +86,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testSupportsClass()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $this->assertTrue($voter->supportsClass($this->_class));
     }
 
@@ -95,7 +95,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testVoteUnsupportedClass()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
         $this->assertEquals(AbstractVoter::ACCESS_ABSTAIN, $voter->vote($token, new \StdClass(), array()));
     }
@@ -105,7 +105,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testVoteUnsupportedAttribute()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
         $this->assertEquals(AbstractVoter::ACCESS_ABSTAIN, $voter->vote($token, new Task(), array('unsupported')));
     }
@@ -115,7 +115,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testVoteAsUnAuthenticatedUser()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
         $user = new \StdClass();
         $token->expects($this->once())
@@ -129,7 +129,7 @@ class AbstractVoterTest extends \PHPUnit_Framework_TestCase
      */
     public function testVoteInvalidArgumentException()
     {
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
         $this->setExpectedException('\InvalidArgumentException');
         $voter->preVote($token, new Task(), array('one', 'two'));

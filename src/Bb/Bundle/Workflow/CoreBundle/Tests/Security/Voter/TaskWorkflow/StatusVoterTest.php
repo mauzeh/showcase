@@ -30,7 +30,7 @@ class StatusVoterTest extends AbstractVoterTest
      *
      * @return StatusVoter
      */
-    protected function _createVoter()
+    protected function createVoter()
     {
         $roleHierarchy = $this->getMock('Symfony\Component\Security\Core\Role\RoleHierarchyInterface');
 
@@ -71,7 +71,7 @@ class StatusVoterTest extends AbstractVoterTest
     public function testVote($currentStatus, $newStatus, $expectedAccessResult)
     {
         $token = $this->getMock('Symfony\Component\Security\Core\Authentication\Token\TokenInterface');
-        $voter = $this->_createVoter();
+        $voter = $this->createVoter();
         $task = new Task();
         $task->setStatus($currentStatus);
         $this->assertEquals($expectedAccessResult, $voter->vote($token, $task, array($newStatus)));
