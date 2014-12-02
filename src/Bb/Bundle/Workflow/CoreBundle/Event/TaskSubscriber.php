@@ -101,7 +101,8 @@ class TaskSubscriber implements EventSubscriberInterface
     {
         $message = 'Task status was changed to ' . $event->getTask()->getStatus();
         $context = array(
-            'task' => $event->getTask()
+            'task' => $event->getTask(),
+            'operator' => $event->getOperator(),
         );
         $this->logger->log(Logger::DEBUG, $message, array(), $context);
     }
