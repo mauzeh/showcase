@@ -73,5 +73,5 @@ You will be asked a few questions about your development box set-up. Feel free t
 To run the tests, stay in the top directory of the repository and run:
 
 ```
-$ phpunit -c app
+$ phpunit
 ```
