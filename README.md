@@ -53,13 +53,13 @@ Installing and running the tests
 To install this code sample, clone this repository on your development box:
 
 ```
-$ git clone https://github.com/mauzeh/showcase.git
+$ git clone https://github.com/mauzeh/showcase-symfony.git
 ```
 
 Then, navigate to the top directory of the repository,
 
 ```
-$ cd showcase/
+$ cd showcase-symfony/
 ```
 
 And get the dependencies:
