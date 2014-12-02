@@ -1,18 +1,13 @@
 Code sample project
 ========================
 
-This repository contains a simplified selection of a real life Symfony project.
-The original project is a web-based workflow app and is currently in 
-production by > 5000 users. In this code sample, no GUI is included. Instead,
-you may run the unit tests provided to verify that the code works.
+This repository contains a simplified selection of a real life Symfony project. The original project is a web-based workflow app and is currently in production by > 5000 users. In this code sample, no GUI is included. Instead, you may run the unit tests provided to verify that the code works.
 
-The intended audience of this repository is code reviewers and technical
-recruiters.
+The intended audience of this repository is code reviewers and technical recruiters.
 
 The files that I think you should look at
 --------------------------------
-For an assessment of the code quality in this repository, please review in 
-particular the following files:
+For an assessment of the code quality in this repository, please review in particular the following files:
 
 1.  [The ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php).
 2.  [The unit test for the ```TaskWorkflowVoter``` class](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/Voter/TaskWorkflowVoterTest.php).
@@ -21,16 +16,11 @@ particular the following files:
 
 Description of the original project
 ---------------------------------
-The original app is a workflow tool intended for groups of linguists working
-on document-centered tasks.
+The original app is a workflow tool intended for groups of linguists working on document-centered tasks.
 
 What this code sample contains
 -----------------------------------
-In this code sample, two Doctrine Entities are implemented: users and tasks. Users
-may have one of four roles: super, admin, resource, and client. In the original app, admins
-may assign tasks to resources. Resources complete tasks, after which admins
-review their work and send it off to the assigned client. Clients can log in
-to the app to download the finished work. 
+In this code sample, two Doctrine Entities are implemented: users and tasks. Users may have one of four roles: super, admin, resource, and client. In the original app, admins may assign tasks to resources. Resources complete tasks, after which admins review their work and send it off to the assigned client. Clients can log in to the app to download the finished work. Supers are admins with some extra privileges.
 
 Tasks have one of five statuses:
 
@@ -42,7 +32,7 @@ Tasks have one of five statuses:
 6.  **Archived**. The task is archived.
 
 This code sample includes a [```TaskWorkflowVoter```](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflowVoter.php) 
-class which checks whether or not a given user is allowed to perform a status transition of a task.
+class which checks whether or not a given user is allowed to change the status of a task.
 
 
 Prerequisites
