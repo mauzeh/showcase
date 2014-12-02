@@ -15,10 +15,12 @@
 namespace Bb\Bundle\Workflow\CoreBundle\Event;
 
 use Bb\Bundle\Workflow\CoreBundle\Entity\Task;
-use Monolog\Logger;
+use Bb\Bundle\Workflow\CoreBundle\BbWorkflowCoreEvents;
+
 use Symfony\Component\EventDispatcher\EventDispatcher;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Bb\Bundle\Workflow\CoreBundle\BbWorkflowCoreEvents;
+
+use Monolog\Logger;
 
 use \JMS\DiExtraBundle\Annotation\Service as Service;
 use \JMS\DiExtraBundle\Annotation\Tag as Tag;

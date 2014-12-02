@@ -15,14 +15,15 @@
 namespace Bb\Bundle\Workflow\CoreBundle\Security\Voter\TaskWorkflow;
 
 use Bb\Bundle\Workflow\CoreBundle\Entity\Task;
+
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 use \JMS\DiExtraBundle\Annotation\Service as Service;
 use \JMS\DiExtraBundle\Annotation\Tag as Tag;
 use \JMS\DiExtraBundle\Annotation\InjectParams as InjectParams;
 use \JMS\DiExtraBundle\Annotation\Inject as Inject;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Provides shared operations for the TaskWorkflow security voters.

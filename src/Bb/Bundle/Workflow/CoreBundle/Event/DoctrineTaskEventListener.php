@@ -22,7 +22,6 @@ use \JMS\DiExtraBundle\Annotation\Service as Service;
 use \JMS\DiExtraBundle\Annotation\Tag as Tag;
 use \JMS\DiExtraBundle\Annotation\InjectParams as InjectParams;
 use \JMS\DiExtraBundle\Annotation\Inject as Inject;
-use Symfony\Component\Security\Core\SecurityContextInterface;
 
 /**
  * Class DoctrineTaskEventListener

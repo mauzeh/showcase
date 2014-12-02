@@ -15,8 +15,9 @@
 namespace Bb\Bundle\Workflow\CoreBundle\Event;
 
 use Bb\Bundle\Workflow\CoreBundle\Entity\User;
-use Symfony\Component\EventDispatcher\Event;
 use Bb\Bundle\Workflow\CoreBundle\Entity\Task;
+
+use Symfony\Component\EventDispatcher\Event;
 
 /**
  * Class TaskEvent
