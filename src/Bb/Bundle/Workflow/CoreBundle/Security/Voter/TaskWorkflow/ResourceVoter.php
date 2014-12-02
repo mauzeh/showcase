@@ -15,6 +15,7 @@
 namespace Bb\Bundle\Workflow\CoreBundle\Security\Voter\TaskWorkflow;
 
 use Bb\Bundle\Workflow\CoreBundle\Entity\Task;
+use Bb\Bundle\Workflow\CoreBundle\Entity\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\VoterInterface;
 
@@ -97,7 +98,7 @@ class ResourceVoter extends AbstractVoter
         }
 
         // Administrators (and higher...) can perform any remaining actions.
-        if ($this->hasRole('ROLE_BB_ADMIN', $token)) {
+        if ($this->hasRole(User::ROLE_ADMIN, $token)) {
             return VoterInterface::ACCESS_GRANTED;
         }
 
