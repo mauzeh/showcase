@@ -9,7 +9,7 @@ The files that I think you should look at
 --------------------------------
 For an assessment of the code quality in this repository, please review in particular the following files:
 
-1.  [The Task-related events](src/Bb/Bundle/Workflow/CoreBundle/Event/), modeled separately (outside of the Entity class) using the Doctrine ```preFlush``` event.
+1.  [The Task-related events](src/Bb/Bundle/Workflow/CoreBundle/Event/), modeled separately (outside of the Entity implementations) using the Doctrine ```preFlush``` event.
 2.  [The ```TaskWorkflow``` security voter classes](src/Bb/Bundle/Workflow/CoreBundle/Security/Voter/TaskWorkflow/).
 3.  [The unit tests for the ```TaskWorkflow``` security voter classes](src/Bb/Bundle/Workflow/CoreBundle/Tests/Security/Voter/TaskWorkflow/).
 
